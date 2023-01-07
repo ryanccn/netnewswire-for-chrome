@@ -2,16 +2,10 @@
   "manifest_version": 3,
   "name": "NetNewsWire for Chrome",
   "description": "NetNewsWire integration for Chrome. App & icon made by Brent Simmons under the MIT license.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "icons": {
     "206": "images/icon-206.png"
   },
-  "content_scripts": [
-    {
-      "js": ["content.js"],
-      "matches": ["<all_urls>"]
-    }
-  ],
   "background": {
     "service_worker": "background.js"
   },
@@ -20,5 +14,5 @@
       "206": "images/icon-206.png"
     }
   },
-  "permissions": ["activeTab"]
+  "permissions": ["activeTab", "scripting"]
 }

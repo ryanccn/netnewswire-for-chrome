@@ -1,9 +1,9 @@
 {
   "name": "netnewswire-for-chrome",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
-    "build": "rm -rf dist/ && mkdir dist/ && cp -r public/* dist/ && esbuild background.ts content.ts --outdir=dist/ --format=esm --minify --bundle"
+    "build": "rm -rf dist/ && mkdir dist/ && cp -r public/* dist/ && esbuild background.ts --outdir=dist/ --format=esm --minify --bundle"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.206",
