@@ -4,7 +4,12 @@ chrome.runtime.onMessage.addListener(async (message, sender) => {
   const elem =
     document.querySelector(
       'link[rel="alternate"][type="application/rss+xml"]'
-    ) ?? document.querySelector('a[href$="feed.xml"], a[href$="atom.xml"]');
+    ) ??
+    document.querySelector(
+      'link[rel="alternate"][type="application/feed+json"]'
+    ) ??
+    document.querySelector('a[href$="feed.xml"], a[href$="atom.xml"]');
+
   if (!elem) return false;
 
   const href = elem.getAttribute('href');
