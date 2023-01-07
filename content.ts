@@ -10,7 +10,9 @@ chrome.runtime.onMessage.addListener(async (message, sender) => {
   const href = elem.getAttribute('href');
   if (!href) return false;
 
-  window.open(`feed://${href}`);
+  const url = href.startsWith('/') ? new URL(href, location.origin) : href;
+
+  window.open(`feed://${url}`);
 
   return true;
 });
