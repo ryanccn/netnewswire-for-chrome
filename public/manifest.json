@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "NetNewsWire for Chrome",
+  "description": "idk, what is this",
+  "version": "0.0.1",
+  "icons": {
+    "206": "images/icon-206.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "206": "images/icon-206.png"
+    }
+  },
+  "permissions": ["activeTab"]
+}
